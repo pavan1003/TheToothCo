@@ -70,9 +70,11 @@ const About = () => {
                   Excellence in Dental Care
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Dr. Malvika Trivedi brings over a decade of experience in providing dental care to
-                  families in Vadodara. With a passion for creating beautiful, healthy smiles, she
-                  combines advanced techniques with a gentle, patient-centered approach.
+                  Finding a reliable and empathetic dentist in Vadodara can be a challenge. For
+                  several years, Dr. Malvika Trivedi (BDS) has led The Tooth Co., establishing it as
+                  a trusted source for exceptional and affordable dental care in Vadodara. We are a
+                  patient-focused clinic dedicated to raising the standard of oral health in our
+                  community.
                 </p>
 
                 <div className="space-y-3 mb-8">
@@ -123,9 +125,9 @@ const About = () => {
           <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 text-center animate-fade-in">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Mission</h3>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              "To provide exceptional dental care in a comfortable, modern environment where every
-              patient feels valued and confident about their oral health journey. We believe that a
-              healthy smile is the foundation of overall well-being and self-confidence."
+              "To empower every patient by making them aware of the critical need and importance of
+              maintaining optimal oral health for better overall systemic health. Your health is our
+              priority."
             </p>
           </div>
         </div>

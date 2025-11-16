@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -54,13 +54,22 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
+              <a
+                href="tel:+917016046982"
+                className="transition-transform duration-300 font-medium gap-2 relative group inline-flex items-center hover:scale-110"
+                aria-label="Call us"
+              >
+                <PhoneCall className="w-5 h-5" />
+                +91 7016046982
+                <span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-full"></span>
+              </a>
             </div>
           </div>
 
           {/* Book Appointment Button */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Button
-              variant="dental"
+              variant="ghost"
               size="default"
               onClick={() =>
                 document.getElementById("appointment")?.scrollIntoView({ behavior: "smooth" })
@@ -69,7 +78,7 @@ const Navbar = () => {
             >
               Book Appointment
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -94,6 +103,14 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <a
+              href="tel:+917016046982"
+              className="flex items-center gap-2 px-3 py-2 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              <PhoneCall className="w-5 h-5" />
+              +91 7016046982
+            </a>
             <div className="px-3 py-2">
               <Button
                 variant="dental"

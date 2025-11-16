@@ -156,7 +156,7 @@ const Footer = () => {
 
           <div className="mt-4 text-center">
             <p className="text-xs text-primary-foreground/60">
-              Dr. Malvika Trivedi - BDS | Reg. No: DCI-12345 | Gujarat State Dental Council
+              Dr. Malvika Trivedi - BDS | Gujarat State Dental Council
             </p>
           </div>
         </div>

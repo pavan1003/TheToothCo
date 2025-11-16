@@ -131,8 +131,9 @@ const Services = () => {
                 Advanced Specialized Treatments
               </h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                We utilize cutting-edge technology and advanced techniques to provide the most
-                effective and comfortable treatment experience.
+                We are committed to superior patient outcomes by utilizing the latest dental
+                technology, instruments, and advanced techniques in all treatments, from routine
+                check-ups to single-sitting root canal treatment and full dental implant placements.
               </p>
             </div>
 
