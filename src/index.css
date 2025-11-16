@@ -205,3 +205,15 @@ All colors MUST be HSL.
     opacity: 0.7;
   }
 }
+
+@keyframes fadeInFix {
+  0% {opacity: 0;}
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(0px);
+  }
+}
+
+.animate-fade-in-fix {
+  animation: fadeInFix 0.6s ease-out forwards;
+}
