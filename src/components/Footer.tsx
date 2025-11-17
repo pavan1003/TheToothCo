@@ -1,4 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Heart } from "lucide-react";
+import { ReactGoogleReviews } from "react-google-reviews";
+import "react-google-reviews/dist/index.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,8 +31,11 @@ const Footer = () => {
 
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary-foreground/80 flex-shrink-0" />
-                <a href="tel:+917016046982" className="text-sm text-primary-foreground/80">
-                  +91 7016046982
+                <a
+                  href={`tel:+91${import.meta.env.VITE_PHONE_NUMBER}`}
+                  className="text-sm text-primary-foreground/80"
+                >
+                  +91 {import.meta.env.VITE_PHONE_NUMBER}
                 </a>
               </div>
 
@@ -99,13 +104,13 @@ const Footer = () => {
                   Contact Us
                 </a>
                 <a
-                  href="tel:+917016046982"
+                  href={`tel:+91${import.meta.env.VITE_PHONE_NUMBER}`}
                   className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
                 >
                   Emergency Care
                 </a>
                 <a
-                  href="https://wa.me/917016046982"
+                  href={`https://wa.me/91${import.meta.env.VITE_PHONE_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
@@ -134,6 +139,10 @@ const Footer = () => {
                 title="The Tooth Co. Location"
               ></iframe>
             </div>
+            <ReactGoogleReviews
+              layout="badge"
+              featurableId={import.meta.env.VITE_GOOGLE_WIDGET_ID}
+            />
           </div>
         </div>
 
@@ -148,15 +157,16 @@ const Footer = () => {
             <div className="flex items-center space-x-2 text-sm text-primary-foreground/80">
               <span>Made with</span>
               <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <a href="https://pavanmistry.tech" target="_blank">
-                by Pavan Mistry
+              <span>by</span>
+              <a href="https://pavanmistry.tech" target="_blank" className="underline">
+                Pavan Mistry
               </a>
             </div>
           </div>
 
           <div className="mt-4 text-center">
             <p className="text-xs text-primary-foreground/60">
-              Dr. Malvika Trivedi - BDS | Gujarat State Dental Council
+              Dr. Malvika Trivedi - BDS | Reg. No: A-15639 | Gujarat State Dental Council
             </p>
           </div>
         </div>
