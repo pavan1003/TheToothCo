@@ -87,7 +87,7 @@ const Appointment = () => {
     whatsappMessage += `\n\nThank you!`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const doctorWhatsApp = "917016046982";
+    const doctorWhatsApp = `91${import.meta.env.VITE_PHONE_NUMBER}`;
     const whatsappUrl = `https://wa.me/${doctorWhatsApp}?text=${encodedMessage}`;
 
     // Open WhatsApp
@@ -297,8 +297,11 @@ const Appointment = () => {
                     <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
-                      <a href="tel:+917016046982" className="text-muted-foreground">
-                        +91 7016046982
+                      <a
+                        href={`tel:+91${import.meta.env.VITE_PHONE_NUMBER}`}
+                        className="text-muted-foreground"
+                      >
+                        +91 {import.meta.env.VITE_PHONE_NUMBER}
                       </a>
                     </div>
                   </div>
@@ -341,7 +344,7 @@ const Appointment = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-lift">
+              {/* <Card className="hover-lift">
                 <CardHeader>
                   <CardTitle>Why Choose WhatsApp Booking?</CardTitle>
                 </CardHeader>
@@ -365,7 +368,7 @@ const Appointment = () => {
                     </li>
                   </ul>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>

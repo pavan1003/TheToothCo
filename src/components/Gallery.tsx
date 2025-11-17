@@ -138,7 +138,7 @@ const Gallery = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-16 animate-fade-in">
+          {/* <div className="text-center mt-16 animate-fade-in">
             <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Ready to Experience Our Modern Facility?
@@ -156,7 +156,7 @@ const Gallery = () => {
                 Schedule Your Visit
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -217,3 +217,8 @@ All colors MUST be HSL.
 .animate-fade-in-fix {
   animation: fadeInFix 0.6s ease-out forwards;
 }
+
+/* Hide reviews card carousel dots */
+.google-reviews .slick-dots {
+  display: none !important;
+}

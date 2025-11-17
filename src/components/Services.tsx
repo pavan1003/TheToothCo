@@ -61,7 +61,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -125,7 +125,7 @@ const Services = () => {
           </div>
 
           {/* Specialized Treatments */}
-          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 animate-fade-in">
+          {/* <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 animate-fade-in">
             <div className="text-center mb-8">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Advanced Specialized Treatments
@@ -160,7 +160,7 @@ const Services = () => {
                 Schedule Your Consultation
               </Button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
