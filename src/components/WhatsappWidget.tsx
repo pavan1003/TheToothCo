@@ -1,9 +1,7 @@
-import { MessageCircle } from "lucide-react";
-
 const WhatsappWidget = () => {
   const phone = "91" + import.meta.env.VITE_PHONE_NUMBER;
   const prefilled = encodeURIComponent(
-    "Hi! I'm contacting you from your website for an appointemnet!"
+    "Hello Dr. Malvika Trivedi. I'm contacting you through your website. I'd like to schedule an appointment."
   );
 
   return (
