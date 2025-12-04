@@ -25,7 +25,7 @@ const Gallery = () => {
       id: 3,
       title: "Dr. Malvika's Consultation Office",
       category: "facility",
-      image: "/media/consultation.png",
+      image: "/media/consultation.jpg",
       description: "Professional consultation space with Dr. Malvika Trivedi",
     },
     {
@@ -39,14 +39,14 @@ const Gallery = () => {
       id: 5,
       title: "Sterilization & Hygiene Center",
       category: "facility",
-      image: "/media/dental-chair.png",
+      image: "/media/sterilization.jpg",
       description: "Advanced sterilization protocols for patient safety",
     },
     {
       id: 6,
       title: "Patient Comfort Area",
       category: "facility",
-      image: "/media/reception-area.png",
+      image: "/media/patient-comfort.jpg",
       description: "Comfortable waiting and reception area",
     },
   ];

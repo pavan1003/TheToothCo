@@ -49,11 +49,11 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Doctor's Photo */}
             <div className="animate-fade-in">
-              <div className="relative">
+              <div className="relative w-3/4 mx-auto">
                 <img
-                  src="/media/consultation.png"
+                  src="/media/dr-malvika-trivedi.png"
                   alt="Dr. Malvika Trivedi in her consultation office"
-                  className="w-full h-96 object-cover rounded-2xl shadow-card"
+                  className="w-full h-full object-fit rounded-2xl shadow-card"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
