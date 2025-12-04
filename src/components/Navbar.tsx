@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, PhoneCall } from "lucide-react";
+import Topbar from "@/components/Topbar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,8 +31,9 @@ const Navbar = () => {
           : "bg-background/90 backdrop-blur-sm"
       }`}
     >
+      {!isScrolled && <Topbar />}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-15 lg:h-18">
           {/* Logo */}
           <a href="/" className="flex-shrink-0">
             <img
@@ -54,15 +56,6 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
-              <a
-                href={`tel:+91${import.meta.env.VITE_PHONE_NUMBER}`}
-                className="transition-transform duration-300 font-medium gap-2 relative group inline-flex items-center hover:scale-110"
-                aria-label="Call us"
-              >
-                <PhoneCall className="w-5 h-5" />
-                +91 {import.meta.env.VITE_PHONE_NUMBER}
-                <span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-full"></span>
-              </a>
             </div>
           </div>
 
@@ -88,7 +81,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border">
