@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Instagram, Facebook, Linkedin, PhoneCall, MessagesSquare } from "lucide-react";
+import { Instagram, Facebook, Linkedin, PhoneCall } from "lucide-react";
 import { WhatsappIcon } from "@/components/ui/icons";
 
 const Topbar = () => {
@@ -26,7 +25,7 @@ const Topbar = () => {
     },
     {
       icon: <PhoneCall size={18} />,
-      text: `+91 ${import.meta.env.VITE_PHONE_NUMBER}`,
+      label: `+91 ${import.meta.env.VITE_PHONE_NUMBER}`,
       title: "Call",
       href: `tel:+91${import.meta.env.VITE_PHONE_NUMBER}`,
     },
@@ -45,7 +44,7 @@ const Topbar = () => {
               className="text-secondary hover:scale-105 transition flex items-center gap-1 font-medium hover:underline"
             >
               {item.icon}
-              {item.text ?? ""}
+              {item.label ?? ""}
             </a>
           ))}
         </div>

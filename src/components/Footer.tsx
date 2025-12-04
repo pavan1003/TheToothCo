@@ -1,9 +1,52 @@
-import { MapPin, Phone, Mail, Clock, Heart } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Heart,
+  Instagram,
+  Facebook,
+  Linkedin,
+  PhoneCall,
+} from "lucide-react";
+import { WhatsappIcon } from "@/components/ui/icons";
 import { ReactGoogleReviews } from "react-google-reviews";
 import "react-google-reviews/dist/index.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    {
+      icon: <PhoneCall size={18} />,
+      label: "Emergency Care",
+      title: "Emergency Care",
+      href: `tel:+91${import.meta.env.VITE_PHONE_NUMBER}`,
+    },
+    {
+      icon: <Instagram size={18} />,
+      title: "Instagram",
+      label: "Instagram",
+      href: import.meta.env.VITE_SOCIAL_INSTAGRAM,
+    },
+    {
+      icon: <Facebook size={18} />,
+      title: "Facebook",
+      label: "Facebook",
+      href: import.meta.env.VITE_SOCIAL_FACEBOOK,
+    },
+    {
+      icon: <Linkedin size={18} />,
+      title: "LinkedIn",
+      label: "LinkedIn",
+      href: import.meta.env.VITE_SOCIAL_LINKEDIN,
+    },
+    {
+      icon: <WhatsappIcon title="WhatsApp" color="#fff" size="18px" />,
+      title: "WhatsApp",
+      label: "WhatsApp",
+      href: `https://wa.me/91${import.meta.env.VITE_PHONE_NUMBER}`,
+    },
+  ];
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -89,34 +132,27 @@ const Footer = () => {
                 >
                   Gallery
                 </a>
-              </div>
-              <div className="space-y-3">
-                <a
-                  href="#appointment"
-                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
-                >
-                  Book Appointment
-                </a>
                 <a
                   href="#appointment"
                   className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
                 >
                   Contact Us
                 </a>
-                <a
-                  href={`tel:+91${import.meta.env.VITE_PHONE_NUMBER}`}
-                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
-                >
-                  Emergency Care
-                </a>
-                <a
-                  href={`https://wa.me/91${import.meta.env.VITE_PHONE_NUMBER}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
-                >
-                  WhatsApp
-                </a>
+              </div>
+              <div className="space-y-3">
+                {socialLinks.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    title={item.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
+                  >
+                    {item.icon}
+                    {item.label ?? ""}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
