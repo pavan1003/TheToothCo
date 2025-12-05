@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Users, Calendar, Award } from "lucide-react";
+import ReactGA from "react-ga4";
 
 const Hero = () => {
   const handleBookAppointment = () => {
+    ReactGA.event("appointment_button_click", { value: "appointment" });
     document.getElementById("appointment")?.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToServices = () => {
+    ReactGA.event("services_button_click", { value: "services" });
     document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
   };
 

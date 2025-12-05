@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Calendar, Clock, MessageCircle, Phone, MapPin, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import ReactGA from "react-ga4";
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -70,6 +71,11 @@ const Appointment = () => {
       });
       return;
     }
+
+    ReactGA.event("booking_submitted", {
+      service: formData.service,
+      phone: formData.phone,
+    });
 
     setIsLoading(true);
 

@@ -6,25 +6,37 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WhatsappWidget from "@/components/WhatsappWidget";
+import ReactGA from "react-ga4";
+import { usePageTracking } from "@/hooks/use-page-tracking";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+ReactGA.initialize(import.meta.env.VITE_GA4_ID);
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+const RouterTracker = () => {
+  usePageTracking();
+  return null;
+};
 
-      <WhatsappWidget />
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+
+        <BrowserRouter>
+          <RouterTracker />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+
+        <WhatsappWidget />
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
